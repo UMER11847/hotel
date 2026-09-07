@@ -1,0 +1,6 @@
+{
+  "name": "Karachi Darbar Premium Lounge",
+  "description": "Authentic Pakistani Cuisine in Kuala Lumpur. Signature Biryani, Karahi, Charcoal BBQ, and Karachi flavours.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
