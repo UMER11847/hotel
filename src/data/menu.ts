@@ -13,7 +13,7 @@ export const MENU_CATEGORIES = [
   { id: 'lassi', name: 'Yogurt Lassi' },
 ] as const;
 
-export const MENU_ITEMS: MenuItem[] = [
+const MENU_ITEMS_DATA: MenuItem[] = [
   // ==================== KARACHI SPECIAL BIRYANI ====================
   {
     id: 'biryani-chicken',
@@ -328,7 +328,7 @@ export const MENU_ITEMS: MenuItem[] = [
       price: 15,
     },
     protein: 'chicken',
-    image: 'https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?q=80&w=800&auto=format&fit=crop',
+    image: 'https://images.pexels.com/photos/32023378/pexels-photo-32023378.jpeg?_gl=1*15ormpv*_ga*MTAxNTQ5NTc1My4xNzg5NjMzODQy*_ga_8JE65Q40S6*czE3ODk2NTQxNTUkbzIkZzEkdDE3ODk2NTQxNjkkajQ2JGwwJGgw',
     tags: ['Popular', 'Karachi Favourite'],
     heatLevel: 'Warm',
   },
@@ -898,6 +898,7 @@ export const MENU_ITEMS: MenuItem[] = [
       price: 14,
     },
     protein: 'beverage',
+    image: 'https://images.pexels.com/photos/7491906/pexels-photo-7491906.jpeg?_gl=1*1cihfns*_ga*MTAxNTQ5NTc1My4xNzg5NjMzODQy*_ga_8JE65Q40S6*czE3ODk2MzM4NDEkbzEkZzEkdDE3ODk2MzQ2MTIkajU0JGwwJGgw',
   },
   {
     id: 'shake-mango-banana',
@@ -996,3 +997,10 @@ export const MENU_ITEMS: MenuItem[] = [
     protein: 'beverage',
   },
 ];
+
+export const MENU_ITEMS: MenuItem[] = MENU_ITEMS_DATA.map((item) => ({
+  ...item,
+  image:
+    item.image ||
+    `https://tse1.mm.bing.net/th?q=${encodeURIComponent(`${item.name} Pakistani food`)}&w=800&h=600`,
+}));
